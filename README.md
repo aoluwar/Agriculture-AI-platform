@@ -36,7 +36,7 @@ agricultural-ai-platform/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agricultural-ai-platform.git
+git clone https://github.com/aoluwar/agricultural-ai-platform.git
 
 # Navigate to the project directory
 cd agricultural-ai-platform
