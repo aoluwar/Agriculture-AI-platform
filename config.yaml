@@ -1,0 +1,114 @@
+# Agricultural AI Platform Configuration
+
+# General settings
+general:
+  debug: false
+  log_level: INFO
+  log_file: logs/agricultural_ai.log
+  random_seed: 42
+
+# Data settings
+data:
+  # Crop disease detection dataset
+  crop_disease:
+    train_dir: data/crop_diseases/train
+    validation_dir: data/crop_diseases/validation
+    test_dir: data/crop_diseases/test
+    image_size: [224, 224]
+    batch_size: 32
+    augmentation: true
+  
+  # Soil analysis dataset
+  soil_analysis:
+    data_file: data/soil_analysis/soil_data.csv
+    target_column: soil_type
+    test_size: 0.2
+    validation_size: 0.1
+    normalize: true
+  
+  # Weather dataset
+  weather:
+    data_file: data/weather/weather_data.csv
+    target_column: temperature
+    sequence_length: 7
+    test_size: 0.2
+  
+  # Crop yield dataset
+  crop_yield:
+    data_file: data/crop_yield/yield_data.csv
+    target_column: yield
+    test_size: 0.2
+
+# Model settings
+models:
+  # Crop disease detection model
+  crop_disease:
+    model_type: mobilenetv2
+    num_classes: 38  # Number of crop disease classes
+    input_shape: [224, 224, 3]
+    learning_rate: 0.001
+    dropout_rate: 0.2
+    fine_tuning: true
+    fine_tuning_epochs: 10
+    saved_model_path: models/saved/crop_disease_model.h5
+  
+  # Soil analysis model
+  soil_analysis:
+    model_type: random_forest
+    n_estimators: 100
+    max_depth: 10
+    saved_model_path: models/saved/soil_analysis_model.pkl
+  
+  # Weather prediction model
+  weather_prediction:
+    model_type: lstm
+    units: [64, 32]
+    dropout_rate: 0.2
+    learning_rate: 0.001
+    saved_model_path: models/saved/weather_prediction_model.h5
+  
+  # Crop yield prediction model
+  crop_yield:
+    model_type: gradient_boosting
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 5
+    saved_model_path: models/saved/crop_yield_model.pkl
+
+# Training settings
+training:
+  crop_disease:
+    epochs: 20
+    batch_size: 32
+    optimizer: adam
+    early_stopping_patience: 5
+    reduce_lr_patience: 3
+    reduce_lr_factor: 0.2
+  
+  weather_prediction:
+    epochs: 50
+    batch_size: 16
+    optimizer: adam
+    early_stopping_patience: 10
+
+# Prediction settings
+prediction:
+  batch_size: 32
+  confidence_threshold: 0.7  # Minimum confidence for predictions
+
+# Web service settings
+service:
+  host: 0.0.0.0
+  port: 5000
+  debug: false
+  upload_folder: uploads
+  allowed_extensions: [jpg, jpeg, png]
+  max_content_length: 16777216  # 16MB
+  api_version: v1
+
+# API endpoints
+api:
+  crop_disease: /api/v1/crop-disease
+  soil_analysis: /api/v1/soil-analysis
+  weather_prediction: /api/v1/weather-prediction
+  crop_yield: /api/v1/crop-yield
