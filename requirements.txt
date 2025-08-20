@@ -1,0 +1,41 @@
+# Core dependencies
+python>=3.8.0
+numpy>=1.19.5
+pandas>=1.3.0
+scikit-learn>=1.0.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Deep learning
+tensorflow>=2.8.0
+torch>=1.10.0
+torchvision>=0.11.0
+keras>=2.8.0
+
+# Computer vision
+opencv-python>=4.5.0
+pillow>=8.3.0
+
+# Geospatial analysis
+geopandas>=0.10.0
+rasterio>=1.2.0
+shapely>=1.8.0
+
+# Weather data
+meteostat>=1.6.0
+
+# Web framework
+flask>=2.0.0
+flask-restful>=0.3.9
+
+# API documentation
+swagger-ui-bundle>=0.0.9
+
+# Testing
+pytest>=6.2.0
+pytest-cov>=2.12.0
+
+# Development tools
+black>=21.5b2
+flake8>=3.9.0
+isort>=5.9.0
