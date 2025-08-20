@@ -20,7 +20,7 @@ Before installing the platform, ensure you have the following prerequisites:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/agricultural-ai-platform.git
+   git clone https://github.com/aoluwar/agricultural-ai-platform.git
    cd agricultural-ai-platform
    ```
 
