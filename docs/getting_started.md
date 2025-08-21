@@ -162,7 +162,7 @@ If you encounter issues not covered in this guide, please:
 
 1. Check the full documentation in the `docs/` directory
 2. Open an issue on our GitHub repository
-3. Contact us at support@agricultural-ai-platform.example.com
+3. Contact us at aoluwar@gmail.com
 
 ## Contributing
 
