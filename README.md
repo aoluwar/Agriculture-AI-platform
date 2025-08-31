@@ -64,4 +64,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgements
 - [Agricultural Research Service](https://www.ars.usda.gov/)
 - [Food and Agriculture Organization](http://www.fao.org/home/en/)
-- [Open Source AI Models for Agriculture](https://example.com)
+
